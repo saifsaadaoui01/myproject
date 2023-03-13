@@ -1,0 +1,19 @@
+{% extends 'test/base.html.twig' %}
+{% block body %}
+    <h1>liste des articles</h1>
+    <table class="table">
+        <tr>
+            <th>identifiant</th>
+            <th>libelle</th>
+            <th>quantité</th>
+            <th>gamme</th>
+        </tr>
+    {% for tab in articles %}
+        <tr>
+    {% for value in tab %}
+        <td>{{ value }}</td>
+    {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
